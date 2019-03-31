@@ -10,12 +10,22 @@ public class Ficha_Medica {
     private String CRM;
     private Date data_consulta;
     private String queixa;
+    private String antecedentes;
     private String historico;
     private String hipotese_diag;
     private String medicacao;
     private String exames_ap_sist;
     private String exames_comp;
 
+    public String getAntecedentes() {
+        return antecedentes;
+    }
+
+    public void setAntecedentes(String antecedentes) {
+        this.antecedentes = antecedentes;
+    }
+
+    
     public int getCod() {
         return cod;
     }
