@@ -5,7 +5,7 @@ public class Secretaria {
     private int RG;
     private String telefone;
     private String endereco;
-    private char sexo;
+    private String sexo;
     private String senha;
     
     public String getNome() {
@@ -48,11 +48,11 @@ public class Secretaria {
         this.endereco = endereco;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
