@@ -4,7 +4,7 @@ public class Paciente {
     private String endereco;
     private String CPF;
     private int RG;
-    private char sexo;
+    private String sexo;
     private int cod_con;
     private int cod_plano;
 
@@ -40,11 +40,11 @@ public class Paciente {
         this.RG = RG;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
