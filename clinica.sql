@@ -111,7 +111,7 @@ CREATE TABLE `ficha_medica` (
   `crm` varchar(99) NOT NULL,
   `data_consulta` date NOT NULL,
   `queixa` varchar(200) NOT NULL,
-  `anteantecedentes` varchar(200) DEFAULT NULL,
+  `antecedentes` varchar(200) DEFAULT NULL,
   `historico_doenca` varchar(200) NOT NULL,
   `hip_diag` varchar(99) NOT NULL,
   `medicacao` varchar(200) NOT NULL,
