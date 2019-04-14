@@ -2,12 +2,22 @@ package model;
 public class Paciente {
     private String nome;
     private String endereco;
+    private String telefone;
     private String CPF;
-    private int RG;
+    private String RG;
     private String sexo;
     private int cod_con;
     private int cod_plano;
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    
     public String getNome() {
         return nome;
     }
@@ -32,11 +42,11 @@ public class Paciente {
         this.CPF = CPF;
     }
 
-    public int getRG() {
+    public String getRG() {
         return RG;
     }
 
-    public void setRG(int RG) {
+    public void setRG(String RG) {
         this.RG = RG;
     }
 
