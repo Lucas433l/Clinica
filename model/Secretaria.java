@@ -2,7 +2,7 @@ package model;
 public class Secretaria {
     private String nome;
     private String CPF;
-    private int RG;
+    private String RG;
     private String telefone;
     private String endereco;
     private String sexo;
@@ -24,11 +24,11 @@ public class Secretaria {
         this.CPF = CPF;
     }
 
-    public int getRG() {
+    public String getRG() {
         return RG;
     }
 
-    public void setRG(int RG) {
+    public void setRG(String RG) {
         this.RG = RG;
     }
 
