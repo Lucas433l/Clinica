@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 31-Mar-2019 às 23:45
--- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.3.2
+-- Tempo de geração: 10/04/2019 às 19:49
+-- Versão do servidor: 10.1.30-MariaDB
+-- Versão do PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `consultorio`
+-- Banco de dados: `clinica`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `admin`
+-- Estrutura para tabela `admin`
 --
 
 CREATE TABLE `admin` (
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `agenda`
+-- Estrutura para tabela `agenda`
 --
 
 CREATE TABLE `agenda` (
@@ -54,7 +54,7 @@ CREATE TABLE `agenda` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `clinica`
+-- Estrutura para tabela `clinica`
 --
 
 CREATE TABLE `clinica` (
@@ -67,7 +67,7 @@ CREATE TABLE `clinica` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `consulta`
+-- Estrutura para tabela `consulta`
 --
 
 CREATE TABLE `consulta` (
@@ -77,7 +77,8 @@ CREATE TABLE `consulta` (
   `nome_medico` varchar(99) NOT NULL,
   `crm` varchar(99) NOT NULL,
   `data` date NOT NULL,
-  `hora` time NOT NULL,
+  `hora_inicio` time DEFAULT NULL,
+  `hora_final` time DEFAULT NULL,
   `preco` float NOT NULL,
   `situacao` int(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -85,7 +86,7 @@ CREATE TABLE `consulta` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `convenio`
+-- Estrutura para tabela `convenio`
 --
 
 CREATE TABLE `convenio` (
@@ -100,7 +101,7 @@ CREATE TABLE `convenio` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ficha_medica`
+-- Estrutura para tabela `ficha_medica`
 --
 
 CREATE TABLE `ficha_medica` (
@@ -122,13 +123,13 @@ CREATE TABLE `ficha_medica` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `medico`
+-- Estrutura para tabela `medico`
 --
 
 CREATE TABLE `medico` (
   `nome` varchar(99) NOT NULL,
   `cpf` varchar(15) NOT NULL,
-  `rg` int(15) NOT NULL,
+  `rg` varchar(15) NOT NULL,
   `crm` varchar(99) NOT NULL,
   `telefone` varchar(16) NOT NULL,
   `endereco` varchar(200) NOT NULL,
@@ -139,7 +140,7 @@ CREATE TABLE `medico` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `paciente`
+-- Estrutura para tabela `paciente`
 --
 
 CREATE TABLE `paciente` (
@@ -147,7 +148,7 @@ CREATE TABLE `paciente` (
   `endereco` varchar(200) NOT NULL,
   `telefone` varchar(16) NOT NULL,
   `cpf` varchar(15) NOT NULL,
-  `rg` int(15) NOT NULL,
+  `rg` varchar(15) NOT NULL,
   `sexo` char(1) NOT NULL,
   `cod_con` int(11) DEFAULT NULL,
   `cod_plano` int(11) DEFAULT NULL
@@ -156,7 +157,7 @@ CREATE TABLE `paciente` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `planos`
+-- Estrutura para tabela `planos`
 --
 
 CREATE TABLE `planos` (
@@ -169,13 +170,13 @@ CREATE TABLE `planos` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `secretaria`
+-- Estrutura para tabela `secretaria`
 --
 
 CREATE TABLE `secretaria` (
   `nome` varchar(99) NOT NULL,
   `cpf` varchar(15) NOT NULL,
-  `rg` int(15) NOT NULL,
+  `rg` varchar(15) NOT NULL,
   `telefone` varchar(16) NOT NULL,
   `endereco` varchar(200) NOT NULL,
   `sexo` char(1) NOT NULL,
@@ -185,7 +186,7 @@ CREATE TABLE `secretaria` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tabela_cid`
+-- Estrutura para tabela `tabela_cid`
 --
 
 CREATE TABLE `tabela_cid` (
@@ -194,7 +195,7 @@ CREATE TABLE `tabela_cid` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `tabela_cid`
+-- Fazendo dump de dados para tabela `tabela_cid`
 --
 
 INSERT INTO `tabela_cid` (`id_cid`, `doenca`) VALUES
@@ -8559,30 +8560,30 @@ INSERT INTO `tabela_cid` (`id_cid`, `doenca`) VALUES
 ('Z999', 'Dependência de máquina e aparelho capacitante não especificado');
 
 --
--- Indexes for dumped tables
+-- Índices de tabelas apagadas
 --
 
 --
--- Indexes for table `admin`
+-- Índices de tabela `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`cpf`);
 
 --
--- Indexes for table `agenda`
+-- Índices de tabela `agenda`
 --
 ALTER TABLE `agenda`
   ADD PRIMARY KEY (`cod_agenda`),
   ADD KEY `crm` (`crm`);
 
 --
--- Indexes for table `clinica`
+-- Índices de tabela `clinica`
 --
 ALTER TABLE `clinica`
   ADD PRIMARY KEY (`cnpj`);
 
 --
--- Indexes for table `consulta`
+-- Índices de tabela `consulta`
 --
 ALTER TABLE `consulta`
   ADD PRIMARY KEY (`cod_consulta`),
@@ -8590,13 +8591,13 @@ ALTER TABLE `consulta`
   ADD KEY `crm` (`crm`);
 
 --
--- Indexes for table `convenio`
+-- Índices de tabela `convenio`
 --
 ALTER TABLE `convenio`
   ADD PRIMARY KEY (`cod_con`);
 
 --
--- Indexes for table `ficha_medica`
+-- Índices de tabela `ficha_medica`
 --
 ALTER TABLE `ficha_medica`
   ADD PRIMARY KEY (`cod_ficha`),
@@ -8604,13 +8605,13 @@ ALTER TABLE `ficha_medica`
   ADD KEY `crm` (`crm`);
 
 --
--- Indexes for table `medico`
+-- Índices de tabela `medico`
 --
 ALTER TABLE `medico`
   ADD PRIMARY KEY (`crm`);
 
 --
--- Indexes for table `paciente`
+-- Índices de tabela `paciente`
 --
 ALTER TABLE `paciente`
   ADD PRIMARY KEY (`cpf`),
@@ -8618,91 +8619,91 @@ ALTER TABLE `paciente`
   ADD KEY `cod_plano` (`cod_plano`);
 
 --
--- Indexes for table `planos`
+-- Índices de tabela `planos`
 --
 ALTER TABLE `planos`
   ADD PRIMARY KEY (`cod_plano`),
   ADD KEY `cod_con` (`cod_con`);
 
 --
--- Indexes for table `secretaria`
+-- Índices de tabela `secretaria`
 --
 ALTER TABLE `secretaria`
   ADD PRIMARY KEY (`cpf`);
 
 --
--- Indexes for table `tabela_cid`
+-- Índices de tabela `tabela_cid`
 --
 ALTER TABLE `tabela_cid`
   ADD PRIMARY KEY (`id_cid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
--- AUTO_INCREMENT for table `agenda`
+-- AUTO_INCREMENT de tabela `agenda`
 --
 ALTER TABLE `agenda`
   MODIFY `cod_agenda` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `consulta`
+-- AUTO_INCREMENT de tabela `consulta`
 --
 ALTER TABLE `consulta`
   MODIFY `cod_consulta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `convenio`
+-- AUTO_INCREMENT de tabela `convenio`
 --
 ALTER TABLE `convenio`
   MODIFY `cod_con` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `ficha_medica`
+-- AUTO_INCREMENT de tabela `ficha_medica`
 --
 ALTER TABLE `ficha_medica`
   MODIFY `cod_ficha` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `planos`
+-- AUTO_INCREMENT de tabela `planos`
 --
 ALTER TABLE `planos`
   MODIFY `cod_plano` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Restrições para dumps de tabelas
 --
 
 --
--- Limitadores para a tabela `agenda`
+-- Restrições para tabelas `agenda`
 --
 ALTER TABLE `agenda`
   ADD CONSTRAINT `agenda_ibfk_1` FOREIGN KEY (`crm`) REFERENCES `medico` (`crm`);
 
 --
--- Limitadores para a tabela `consulta`
+-- Restrições para tabelas `consulta`
 --
 ALTER TABLE `consulta`
   ADD CONSTRAINT `consulta_ibfk_1` FOREIGN KEY (`cpf`) REFERENCES `paciente` (`cpf`),
   ADD CONSTRAINT `consulta_ibfk_2` FOREIGN KEY (`crm`) REFERENCES `medico` (`crm`);
 
 --
--- Limitadores para a tabela `ficha_medica`
+-- Restrições para tabelas `ficha_medica`
 --
 ALTER TABLE `ficha_medica`
   ADD CONSTRAINT `ficha_medica_ibfk_1` FOREIGN KEY (`cpf`) REFERENCES `paciente` (`cpf`),
   ADD CONSTRAINT `ficha_medica_ibfk_2` FOREIGN KEY (`crm`) REFERENCES `medico` (`crm`);
 
 --
--- Limitadores para a tabela `paciente`
+-- Restrições para tabelas `paciente`
 --
 ALTER TABLE `paciente`
   ADD CONSTRAINT `paciente_ibfk_1` FOREIGN KEY (`cod_con`) REFERENCES `convenio` (`cod_con`),
   ADD CONSTRAINT `paciente_ibfk_2` FOREIGN KEY (`cod_plano`) REFERENCES `planos` (`cod_plano`);
 
 --
--- Limitadores para a tabela `planos`
+-- Restrições para tabelas `planos`
 --
 ALTER TABLE `planos`
   ADD CONSTRAINT `planos_ibfk_1` FOREIGN KEY (`cod_con`) REFERENCES `convenio` (`cod_con`);
