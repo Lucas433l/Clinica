@@ -8,8 +8,9 @@ public class Consulta {
     private String CPF;
     private String medico;
     private String CRM;
-    private Date data;
-    private Date hora;
+    private String data;
+    private String hora_inicial;
+    private String hora_final;
     private float preco;
     private int situacao;
     public int getCod() {
@@ -52,20 +53,28 @@ public class Consulta {
         this.CRM = CRM;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public Date getHora() {
-        return hora;
+    public String getHora_final() {
+        return hora_final;
     }
 
-    public void setHora(Date hora) {
-        this.hora = hora;
+    public void setHora_final(String hora_final) {
+        this.hora_final = hora_final;
+    }
+
+    public String getHora_inical() {
+        return hora_inicial;
+    }
+
+    public void setHora_inicial(String hora) {
+        this.hora_inicial = hora;
     }
 
     public float getPreco() {

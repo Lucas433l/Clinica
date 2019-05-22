@@ -2,7 +2,7 @@ package model;
 public class Medico {
     private String nome;
     private String CPF;
-    private int RG;
+    private String RG;
     private String CRM;
     private String telefone;
     private String endereco;
@@ -25,11 +25,11 @@ public class Medico {
         this.CPF = CPF;
     }
 
-    public int getRG() {
+    public String getRG() {
         return RG;
     }
 
-    public void setRG(int RG) {
+    public void setRG(String RG) {
         this.RG = RG;
     }
 
