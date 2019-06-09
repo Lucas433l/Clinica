@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projmedico;
+package frames;
+
+import DAO.MedicoDAO;
+import javax.swing.JOptionPane;
+import model.Medico;
 
 /**
  *
@@ -17,7 +21,15 @@ public class CadMedico extends javax.swing.JInternalFrame {
     public CadMedico() {
         initComponents();
     }
-
+    public void limpar(){
+        jT_Nome.setText("");
+        jF_CPF.setText("");
+        jT_RG.setText("");
+        jT_CRM.setText("");
+        jF_Telefone.setText("");
+        jT_End.setText("");
+        jP_Senha.setText("");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,207 +39,290 @@ public class CadMedico extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jT_Nome = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jF_CPF = new javax.swing.JFormattedTextField();
         jLabel6 = new javax.swing.JLabel();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jF_Telefone = new javax.swing.JFormattedTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jLabel10 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jT_End = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jLabel4.setText("jLabel4");
+        jLabel9 = new javax.swing.JLabel();
+        jP_Senha = new javax.swing.JPasswordField();
+        jLabel10 = new javax.swing.JLabel();
+        jR_M = new javax.swing.JRadioButton();
+        jR_F = new javax.swing.JRadioButton();
+        jLabel14 = new javax.swing.JLabel();
+        jT_CRM = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jT_RG = new javax.swing.JTextField();
+        jC_UF = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        getContentPane().setLayout(null);
+        setMinimumSize(new java.awt.Dimension(600, 450));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 562, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(1107, 15, 0, 562);
-
-        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cadastro médico ");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 0, 380, 51);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 380, 51));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel3.setText("Nome ");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 80, 70, 30);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 70, 30));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jT_Nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jT_NomeActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(80, 80, 480, 30);
+        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 480, 30));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
-        jLabel5.setText("Cpf");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 130, 50, 30);
+        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setText("CPF");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 50, 30));
 
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+            jF_CPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(80, 130, 140, 30);
+        jF_CPF.setText("");
+        jF_CPF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 240, 30));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel6.setText("RG");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(230, 130, 30, 30);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 30, 30));
 
-        try {
-            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#########")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        getContentPane().add(jFormattedTextField2);
-        jFormattedTextField2.setBounds(270, 130, 140, 30);
-
-        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel7.setText("Telefone ");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 190, 90, 30);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 90, 30));
 
         try {
-            jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)9####-####")));
+            jF_Telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) 9####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(jFormattedTextField3);
-        jFormattedTextField3.setBounds(100, 190, 140, 30);
+        jF_Telefone.setText("");
+        jF_Telefone.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jF_Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 160, 30));
 
-        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel8.setText("Endereço ");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 260, 90, 21);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 90, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jT_End.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jT_End.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jT_EndActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(120, 260, 450, 30);
+        getContentPane().add(jT_End, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 450, 30));
 
-        jLabel9.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mostrar-a-senha-24.png"))); // NOI18N
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 30, -1));
+
+        jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel9.setText("Senha ");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(30, 310, 60, 40);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, 40));
 
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        jP_Senha.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jP_Senha.setEchoChar('*');
+        jP_Senha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                jP_SenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(90, 320, 170, 30);
+        getContentPane().add(jP_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 190, 30));
 
-        jLabel10.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel10.setText("Sexo ");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(250, 190, 42, 21);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
-        jRadioButton1.setFont(new java.awt.Font("News701 BT", 1, 14)); // NOI18N
-        jRadioButton1.setText("Feminino");
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(290, 190, 120, 30);
+        jR_M.setBackground(null);
+        buttonGroup1.add(jR_M);
+        jR_M.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jR_M.setText("Masculino");
+        getContentPane().add(jR_M, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 120, -1));
 
-        jRadioButton2.setFont(new java.awt.Font("News701 BT", 1, 14)); // NOI18N
-        jRadioButton2.setText("Masculino");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(390, 190, 110, 30);
+        buttonGroup1.add(jR_F);
+        jR_F.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jR_F.setText("Feminino");
+        getContentPane().add(jR_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 120, -1));
 
-        jLabel11.setFont(new java.awt.Font("News701 BT", 1, 14)); // NOI18N
-        jLabel11.setIcon(new javax.swing.ImageIcon("/media/aluno/669C88B99C888571/clinica/src/img/icons8-salvar-e-fechar-48.png")); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel14.setText("CRM");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 59, 15));
+
+        jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 300, 30));
+
+        jLabel15.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel15.setText("UF");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar-como-48.png"))); // NOI18N
         jLabel11.setText("Salvar");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(40, 370, 110, 50);
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 140, 50));
 
-        jLabel13.setFont(new java.awt.Font("News701 BT", 1, 14)); // NOI18N
-        jLabel13.setIcon(new javax.swing.ImageIcon("/media/aluno/669C88B99C888571/clinica/src/img/icons8-limpar-símbolo-filled-48 (1).png")); // NOI18N
-        jLabel13.setText("Limpar");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(160, 380, 120, 30);
+        jT_RG.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jT_RG, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 170, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tay2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 640, 430);
+        jC_UF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jC_UF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
+        getContentPane().add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 154, 90, 40));
 
-        jLabel12.setText("jLabel12");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(560, 190, 90, 70);
+        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar-48.png"))); // NOI18N
+        jLabel4.setText("Limpar");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 120, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jT_NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jT_NomeActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jT_EndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_EndActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jT_EndActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void jP_SenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jP_SenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_jP_SenhaActionPerformed
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        boolean confirm = true;
+        
+        String nome = jT_Nome.getText();
+        if(nome.equals("")){
+            confirm = false;
+        }
+        
+        String cpf = jF_CPF.getText();
+        if(cpf.replace(".", "").replace(" ","").replace("-","").equals("")){
+            confirm = false;
+        }
+        
+        String rg = jT_RG.getText();
+        if(rg.equals("")){
+            confirm = false;
+        }
+        
+        String crm = jT_CRM.getText();
+        String uf = (String) jC_UF.getSelectedItem();
+        if(crm.equals("")){
+            confirm = false;
+        }
+        else{
+            crm += "/"+uf;
+        }
+        
+        String telefone = jF_Telefone.getText();
+        if(telefone.replace("(","").replace(")","").replace(" ","").replace("9","").replace("-","").equals("")){
+            confirm = false;
+        }
+        
+        String endereco = jT_End.getText();
+        if(endereco.equals("")){
+            confirm = false;
+        }
+        
+        String senha = new String(jP_Senha.getPassword());
+        if(senha.equals("")){
+            confirm = false;
+        }
+        
+        String sexo = "X";
+        if(jR_F.isSelected()){
+            sexo = "F";
+        }
+        else if(jR_M.isSelected()){
+            sexo = "M";
+        }
+        else{
+            confirm = false;
+        }
+        if(confirm){
+            Medico med = new Medico();
+            med.setNome(nome);
+            med.setCPF(cpf);
+            med.setRG(rg);
+            med.setCRM(crm);
+            med.setTelefone(telefone);
+            med.setEndereco(endereco);
+            med.setSexo(sexo);
+            med.setSenha(senha);
+            int op = JOptionPane.showConfirmDialog(this, "Deseja realmente cadastrar esse médico?");
+            if(op == 0){
+                MedicoDAO dao =  new MedicoDAO();
+                dao.insert(med);
+                limpar();
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Médico não será cadastrado.");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Alguma informação não foi preenchida.");
+        }
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        if(jP_Senha.getEchoChar() == '*'){
+            jP_Senha.setEchoChar('\u0000');
+        }else{
+            jP_Senha.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        limpar();
+    }//GEN-LAST:event_jLabel4MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> jC_UF;
+    private javax.swing.JFormattedTextField jF_CPF;
+    private javax.swing.JFormattedTextField jF_Telefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -236,12 +331,12 @@ public class CadMedico extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPasswordField jP_Senha;
+    private javax.swing.JRadioButton jR_F;
+    private javax.swing.JRadioButton jR_M;
+    private javax.swing.JTextField jT_CRM;
+    private javax.swing.JTextField jT_End;
+    private javax.swing.JTextField jT_Nome;
+    private javax.swing.JTextField jT_RG;
     // End of variables declaration//GEN-END:variables
 }

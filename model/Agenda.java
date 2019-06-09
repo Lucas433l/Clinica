@@ -1,14 +1,11 @@
 package model;
-
-import java.util.Date;
-
 public class Agenda {
     private int cod;
     private String medico;
     private String CRM;
-    private Date data;
-    private Date hora_inicio;
-    private Date hora_final;
+    private String data;
+    private String hora_inicio;
+    private String hora_final;
     private String desc;
 
     public int getCod() {
@@ -35,27 +32,27 @@ public class Agenda {
         this.CRM = CRM;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public Date getHora_inicio() {
+    public String getHora_inicio() {
         return hora_inicio;
     }
 
-    public void setHora_inicio(Date hora_inicio) {
+    public void setHora_inicio(String hora_inicio) {
         this.hora_inicio = hora_inicio;
     }
 
-    public Date getHora_final() {
+    public String getHora_final() {
         return hora_final;
     }
 
-    public void setHora_final(Date hora_final) {
+    public void setHora_final(String hora_final) {
         this.hora_final = hora_final;
     }
 

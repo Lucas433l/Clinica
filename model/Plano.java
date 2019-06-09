@@ -1,5 +1,5 @@
 package model;
-public class Planos {
+public class Plano {
     private int cod;
     private String tipo;
     private String desc;

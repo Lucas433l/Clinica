@@ -8,7 +8,7 @@ public class Ficha_Medica {
     private String CPF;
     private String nome_medico;
     private String CRM;
-    private Date data_consulta;
+    private String data_consulta;
     private String queixa;
     private String antecedentes;
     private String historico;
@@ -66,11 +66,11 @@ public class Ficha_Medica {
         this.CRM = CRM;
     }
 
-    public Date getData_consulta() {
+    public String getData_consulta() {
         return data_consulta;
     }
 
-    public void setData_consulta(Date data_consulta) {
+    public void setData_consulta(String data_consulta) {
         this.data_consulta = data_consulta;
     }
 

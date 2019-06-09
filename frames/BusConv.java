@@ -3,7 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projmedico;
+package frames;
+
+import DAO.ConvenioDAO;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import model.Convenio;
 
 /**
  *
@@ -16,6 +22,23 @@ public class BusConv extends javax.swing.JInternalFrame {
      */
     public BusConv() {
         initComponents();
+        DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+        jTable.setRowSorter(new TableRowSorter(model));
+        readTable(new ConvenioDAO().readAll());
+    }
+    
+    public void readTable(List<Convenio> dao){
+        DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+        model.setNumRows(0);
+        
+        for(Convenio c: dao){
+            model.addRow(new Object[]{
+                c.getCod(),
+                c.getNome(),
+                c.getCNPJ(),
+                c.getFaturamento()
+            });
+        }
     }
 
     /**
@@ -27,121 +50,123 @@ public class BusConv extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jT_Nome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jLabel5 = new javax.swing.JLabel();
+        jF_CNPJ = new javax.swing.JFormattedTextField();
         jLabel6 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setPreferredSize(new java.awt.Dimension(700, 500));
-        getContentPane().setLayout(null);
+        setPreferredSize(new java.awt.Dimension(650, 430));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 494, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(720, 0, 0, 494);
-
-        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Buscar Convênios");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(170, 0, 300, 60);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 300, 60));
 
-        jLabel3.setFont(new java.awt.Font("News701 BT", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Nome do Convênio ");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 140, 190, 30);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 190, 30));
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(20, 190, 370, 40);
+        jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jT_Nome.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 370, 30));
 
-        jLabel4.setFont(new java.awt.Font("News701 BT", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("CNPJ do Convênio ");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 240, 180, 50);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 180, 50));
 
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
+            jF_CNPJ.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jF_CNPJ.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jF_CNPJ.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jF_CNPJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
+                jF_CNPJActionPerformed(evt);
             }
         });
-        getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(80, 290, 170, 30);
+        getContentPane().add(jF_CNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 190, 30));
 
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(470, 260, 70, 60);
-
-        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon("/media/aluno/669C88B99C888571/clinica/src/img/icons8-pesquisar-48.png")); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
         jLabel6.setText("Buscar ");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(100, 350, 130, 40);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 130, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tay2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 640, 410);
+        jTable.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Código", "Nome", "CNPJ", "Faturamento(R$)"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 600, 180));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+    private void jF_CNPJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jF_CNPJActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_jF_CNPJActionPerformed
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
+        String nome = jT_Nome.getText();
+        String cnpj = jF_CNPJ.getText();
+        ConvenioDAO dao = new ConvenioDAO();
+        
+        if(!nome.equals("")){
+            readTable(dao.readForName(nome));
+        }
+        
+        else if(!cnpj.replace(".", "").replace("/","").equals("")){
+            readTable(dao.readForCNPJ(cnpj));
+        }
+        else{
+            readTable(dao.readAll());
+        }
     }//GEN-LAST:event_jLabel6MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jF_CNPJ;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jT_Nome;
+    private javax.swing.JTable jTable;
     // End of variables declaration//GEN-END:variables
 }

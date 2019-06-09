@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projmedico;
+package frames;
+
+import DAO.AgendaDAO;
+import javax.swing.JOptionPane;
+import model.Agenda;
 
 /**
  *
@@ -17,7 +21,15 @@ public class MarcarComp extends javax.swing.JInternalFrame {
     public MarcarComp() {
         initComponents();
     }
-
+    
+    public void limpar(){
+        jT_Nome.setText("");
+        jT_CRM.setText("");
+        jF_Data.setText("");
+        jF_Horaf.setText("");
+        jF_Horai.setText("");
+        jT_Desc.setText("");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,149 +39,216 @@ public class MarcarComp extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jF_Data = new javax.swing.JFormattedTextField();
+        jF_Horai = new javax.swing.JFormattedTextField();
+        jF_Horaf = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jT_Nome = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jT_Desc = new javax.swing.JTextPane();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jT_CRM = new javax.swing.JTextField();
+        jC_UF = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        getContentPane().setLayout(null);
+        setMinimumSize(new java.awt.Dimension(630, 400));
+        setPreferredSize(new java.awt.Dimension(630, 400));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 472, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(694, 0, 0, 472);
-
-        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Marcar Compromisso Médico ");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(100, 0, 490, 60);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 490, 60));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel3.setText("Data:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 120, 50, 21);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 50, -1));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel4.setText("Hora inicial:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 170, 100, 14);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 120, 20));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel5.setText("Hora final:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 220, 90, 14);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, 20));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel6.setText("Descrição do compromisso: ");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(20, 270, 220, 20);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 300, 330, 110);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 270, 20));
 
         try {
-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            jF_Data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(70, 120, 110, 29);
+        jF_Data.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 110, -1));
 
         try {
-            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+            jF_Horai.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(jFormattedTextField2);
-        jFormattedTextField2.setBounds(120, 170, 110, 29);
+        jF_Horai.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jF_Horai, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 60, 30));
 
         try {
-            jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+            jF_Horaf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(jFormattedTextField3);
-        jFormattedTextField3.setBounds(120, 220, 110, 29);
+        jF_Horaf.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jF_Horaf, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 60, 30));
 
-        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel7.setText("Nome do médico:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(10, 70, 140, 21);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(170, 70, 430, 30);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 160, -1));
 
-        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon("/media/aluno/669C88B99C888571/clinica/src/img/icons8-salvar-e-fechar-48.png")); // NOI18N
+        jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 430, 30));
+
+        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar-como-48.png"))); // NOI18N
         jLabel8.setText("Salvar");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(360, 370, 110, 50);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 110, 50));
 
-        jLabel9.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
-        jLabel9.setIcon(new javax.swing.ImageIcon("/media/aluno/669C88B99C888571/clinica/src/img/icons8-limpar-símbolo-filled-48 (1).png")); // NOI18N
-        jLabel9.setText("Apagar");
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+        jT_Desc.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jScrollPane1.setViewportView(jT_Desc);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 310, 80));
+
+        jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel9.setText("CRM");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar-48.png"))); // NOI18N
+        jLabel10.setText("Limpar");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
+                jLabel10MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(490, 380, 120, 30);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tay2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 640, 420);
+        jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jT_CRM.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jT_CRMMouseClicked(evt);
+            }
+        });
+        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 170, 30));
+
+        jC_UF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jC_UF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
+        getContentPane().add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 71, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
+        boolean confirm = true;
+        
+        String nome = jT_Nome.getText();
+        if(nome.equals("")){
+            confirm = false;
+        }
+        
+        String crm = jT_CRM.getText();
+        if(crm.equals("")){
+            confirm = false;
+        }
+        else{
+            crm += "/"+jC_UF.getSelectedItem();
+        }
+        
+        String data = jF_Data.getText();
+        if(data.replace("/","").replace(" ","").equals("")){
+            confirm = false;
+        }
+        else{
+            String aux[] = data.split("/");
+            data = aux[2]+"-"+aux[1]+"-"+aux[0];
+        }
+        
+        String horai = jF_Horaf.getText();
+        if(horai.replace(":","").replace(" ","").equals("")){
+            confirm = false;
+        }
+        else{
+            horai += ":00";
+        }
+        
+        String horaf = jF_Horai.getText();
+        if(horaf.replace(":","").replace(" ","").equals("")){
+            confirm = false;
+        }
+        else{
+            horaf += ":00";
+        }
+        
+        String desc = jT_Desc.getText();
+        if(desc.equals("")){
+            confirm = false;
+        }
+        
+        if(confirm){
+            Agenda agenda = new Agenda();
+            agenda.setMedico(nome);
+            agenda.setCRM(crm);
+            agenda.setData(data);
+            agenda.setHora_inicio(horai);
+            agenda.setHora_final(horaf);
+            agenda.setDesc(desc);
+            
+            int op = JOptionPane.showConfirmDialog(this,"Deseja realmente marcar esse compromisso?");
+            if(op == 0){
+                AgendaDAO dao = new AgendaDAO();
+                dao.insert(agenda);
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"Compromisso não será marcado.");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Alguma informação não foi preenchida.");
+        }
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+    private void jT_CRMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jT_CRMMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseClicked
+    }//GEN-LAST:event_jT_CRMMouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        limpar();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JComboBox<String> jC_UF;
+    private javax.swing.JFormattedTextField jF_Data;
+    private javax.swing.JFormattedTextField jF_Horaf;
+    private javax.swing.JFormattedTextField jF_Horai;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -178,9 +257,9 @@ public class MarcarComp extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jT_CRM;
+    private javax.swing.JTextPane jT_Desc;
+    private javax.swing.JTextField jT_Nome;
     // End of variables declaration//GEN-END:variables
 }

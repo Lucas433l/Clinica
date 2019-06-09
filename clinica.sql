@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 10/04/2019 às 19:49
--- Versão do servidor: 10.1.30-MariaDB
--- Versão do PHP: 7.2.1
+-- Tempo de geração: 09/06/2019 às 15:19
+-- Versão do servidor: 10.1.40-MariaDB
+-- Versão do PHP: 7.1.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,6 +35,13 @@ CREATE TABLE `admin` (
   `senha` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Despejando dados para a tabela `admin`
+--
+
+INSERT INTO `admin` (`nome`, `telefone`, `cpf`, `senha`) VALUES
+('Lucas', '(85) 98847-3080', '079.217.143-82', '202cb962ac59075b964b07152d234b70');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +57,13 @@ CREATE TABLE `agenda` (
   `hora_final` time NOT NULL,
   `descricao` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Despejando dados para a tabela `agenda`
+--
+
+INSERT INTO `agenda` (`cod_agenda`, `nome_medico`, `crm`, `data`, `hora_inicio`, `hora_final`, `descricao`) VALUES
+(4, 'Lucas', '11111111/CE', '2019-06-12', '09:20:00', '11:00:00', 'Apresentação');
 
 -- --------------------------------------------------------
 
@@ -83,6 +97,14 @@ CREATE TABLE `consulta` (
   `situacao` int(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Despejando dados para a tabela `consulta`
+--
+
+INSERT INTO `consulta` (`cod_consulta`, `nome_paciente`, `cpf`, `nome_medico`, `crm`, `data`, `hora_inicio`, `hora_final`, `preco`, `situacao`) VALUES
+(2, 'Zulmira', '333.333.333-33', 'Lucas', '11111111/CE', '2019-06-14', '09:20:00', '10:10:00', 0, 1),
+(3, 'Zulmira', '333.333.333-33', 'Lucas', '11111111/CE', '2019-06-09', '09:00:00', '11:00:00', 100, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -97,6 +119,13 @@ CREATE TABLE `convenio` (
   `cnpj` varchar(20) NOT NULL,
   `faturamento` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Despejando dados para a tabela `convenio`
+--
+
+INSERT INTO `convenio` (`cod_con`, `nome`, `telefone`, `endereco`, `cnpj`, `faturamento`) VALUES
+(1, 'Nenhum', '(11) 1111-1111', 'Nenhum', '11.111.111/1111.11', 100);
 
 -- --------------------------------------------------------
 
@@ -120,6 +149,13 @@ CREATE TABLE `ficha_medica` (
   `exames_comp` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Despejando dados para a tabela `ficha_medica`
+--
+
+INSERT INTO `ficha_medica` (`cod_ficha`, `nome_paciente`, `cpf`, `nome_medico`, `crm`, `data_consulta`, `queixa`, `antecedentes`, `historico_doenca`, `hip_diag`, `medicacao`, `exames_ap_sist`, `exames_comp`) VALUES
+(1, 'Zulmira', '333.333.333-33', 'Lucas', '11111111/CE', '2019-06-14', 'Febre', '-', '-', 'Gripe', 'Paracetamol\nTilenol	', '-', '-');
+
 -- --------------------------------------------------------
 
 --
@@ -136,6 +172,14 @@ CREATE TABLE `medico` (
   `sexo` char(1) NOT NULL,
   `senha` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Despejando dados para a tabela `medico`
+--
+
+INSERT INTO `medico` (`nome`, `cpf`, `rg`, `crm`, `telefone`, `endereco`, `sexo`, `senha`) VALUES
+('Lucas', '035.896.229-38', '1111111', '11111111/CE', '(88) 98888-8888', 'Rua Chile', 'M', '202cb962ac59075b964b07152d234b70'),
+('Leticia', '222.222.222-22', '1232131231', '1321321321/CE', '(12) 93213-2131', 'Rua L', 'F', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -154,6 +198,13 @@ CREATE TABLE `paciente` (
   `cod_plano` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Despejando dados para a tabela `paciente`
+--
+
+INSERT INTO `paciente` (`nome`, `endereco`, `telefone`, `cpf`, `rg`, `sexo`, `cod_con`, `cod_plano`) VALUES
+('Zulmira', 'Alguma rua do Cumbuco', '(33) 93333-3333', '333.333.333-33', '333333333', 'F', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -166,6 +217,13 @@ CREATE TABLE `planos` (
   `descricao` varchar(99) DEFAULT NULL,
   `cod_con` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Despejando dados para a tabela `planos`
+--
+
+INSERT INTO `planos` (`cod_plano`, `tipo`, `descricao`, `cod_con`) VALUES
+(1, 'Nenhum', 'Nenhum', 1);
 
 -- --------------------------------------------------------
 
@@ -183,6 +241,13 @@ CREATE TABLE `secretaria` (
   `senha` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Despejando dados para a tabela `secretaria`
+--
+
+INSERT INTO `secretaria` (`nome`, `cpf`, `rg`, `telefone`, `endereco`, `sexo`, `senha`) VALUES
+('Tatiana', '111.111.111-11', '123456', '(88) 98888-8888', 'Rua J', 'F', '202cb962ac59075b964b07152d234b70');
+
 -- --------------------------------------------------------
 
 --
@@ -195,7 +260,7 @@ CREATE TABLE `tabela_cid` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `tabela_cid`
+-- Despejando dados para a tabela `tabela_cid`
 --
 
 INSERT INTO `tabela_cid` (`id_cid`, `doenca`) VALUES
@@ -8645,31 +8710,31 @@ ALTER TABLE `tabela_cid`
 -- AUTO_INCREMENT de tabela `agenda`
 --
 ALTER TABLE `agenda`
-  MODIFY `cod_agenda` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `consulta`
 --
 ALTER TABLE `consulta`
-  MODIFY `cod_consulta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `convenio`
 --
 ALTER TABLE `convenio`
-  MODIFY `cod_con` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_con` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `ficha_medica`
 --
 ALTER TABLE `ficha_medica`
-  MODIFY `cod_ficha` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_ficha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `planos`
 --
 ALTER TABLE `planos`
-  MODIFY `cod_plano` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_plano` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para dumps de tabelas

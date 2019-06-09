@@ -4,7 +4,13 @@
  * and open the template in the editor.
  */
 
-package projmedico;
+package frames;
+
+import DAO.AgendaDAO;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import model.Agenda;
 
 /**
  *
@@ -15,6 +21,24 @@ public class ConsulAgenMedica extends javax.swing.JInternalFrame {
     /** Creates new form ConsulAgenMedica */
     public ConsulAgenMedica() {
         initComponents();
+        DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+        jTable.setRowSorter(new TableRowSorter(model));
+        readTable(new AgendaDAO().readAll());
+    }
+    
+    public void readTable(List<Agenda> dao){
+        DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+        model.setNumRows(0);
+        
+        for(Agenda a: dao){
+            model.addRow(new Object[]{
+                a.getMedico(),
+                a.getData(),
+                a.getHora_inicio(),
+                a.getHora_final(),
+                a.getDesc()
+            });
+        }
     }
 
     /** This method is called from within the constructor to
@@ -27,112 +51,122 @@ public class ConsulAgenMedica extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jT_Nome = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jT_CRM = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTable = new javax.swing.JTable();
+        jC_UF = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        getContentPane().setLayout(null);
+        setMinimumSize(new java.awt.Dimension(650, 450));
+        setPreferredSize(new java.awt.Dimension(650, 450));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel2.setText("Nome do Médico:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 90, 190, 40);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 190, 40));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jT_Nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jT_NomeActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(210, 100, 390, 30);
+        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 390, 30));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel3.setText("CRM do Médico:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 160, 179, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(210, 160, 240, 30);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 179, 20));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 36)); // NOI18N
+        jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 240, 30));
+
+        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Agenda Médica");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(140, 0, 370, 50);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 370, 50));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nome", "Data", "Hora Inicio", "Hora Fim", "Descrição"
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 230, 530, 150);
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable);
 
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 530, 170));
+
+        jC_UF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jC_UF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
+        getContentPane().add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
+        jLabel5.setText("Buscar");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(460, 210, 80, 60);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 130, 50));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("/media/aluno/669C88B99C888571/clinica/src/img/icons8-pesquisar-48.png")); // NOI18N
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(460, 160, 60, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tay2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 790, 520);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jT_NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jT_NomeActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
+        String nome = jT_Nome.getText();
+        String crm = jT_CRM.getText();
+        
+        if(!nome.equals("")){
+            readTable(new AgendaDAO().readForName(nome));
+        }
+        
+        else if(!crm.equals("")){
+            crm += "/" + jC_UF.getSelectedItem();
+            readTable(new AgendaDAO().readForCRM(crm));
+        }
+        
+        else{
+            readTable(new AgendaDAO().readAll());
+        }
     }//GEN-LAST:event_jLabel5MouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel6MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jC_UF;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jT_CRM;
+    private javax.swing.JTextField jT_Nome;
+    private javax.swing.JTable jTable;
     // End of variables declaration//GEN-END:variables
 
 }

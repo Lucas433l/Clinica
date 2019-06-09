@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JOptionPane;
 import model.Secretaria;
 
@@ -29,7 +28,7 @@ public class SecretariaDAO {
             pstm.execute();
             JOptionPane.showMessageDialog(null,"Secretária cadastrada com sucesso.");
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -40,75 +39,11 @@ public class SecretariaDAO {
                     conn.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
     }
     
-    //função que deleta a secretária do sistema
-    public void delete(String cpf){
-        String sql = "DELETE FROM secretaria where cpf = ?";
-        Connection conn = null;
-        PreparedStatement pstm = null;
-        try{
-            conn = Conexao.Conectar();
-            pstm = conn.prepareStatement(sql);
-            pstm.setString(1,cpf);
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Secretária excluída com sucesso.");
-        }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
-        }finally{
-            try{
-                if(pstm != null){
-                    pstm.close();
-                }
-                if(conn != null){
-                    conn.close();
-                }
-            }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
-            }
-        }
-    }
-    
-    //função de update
-    public void update(Secretaria secretaria){
-        String sql = "UPDATE secretaria SET nome= ?, cpf= ?,rg=?, telefone= ?,"+
-        "endereco= ?, sexo= ?, senha= md5(?) WHERE ?";
-        
-        Connection conn = null;
-        PreparedStatement pstm= null;
-
-        try{
-            conn = Conexao.Conectar();
-            pstm = conn.prepareStatement(sql);
-            pstm.setString(1, secretaria.getNome());
-            pstm.setString(2, secretaria.getCPF());
-            pstm.setString(3, secretaria.getRG());
-            pstm.setString(4, secretaria.getTelefone());
-            pstm.setString(5, secretaria.getEndereco());
-            pstm.setString(6, secretaria.getSexo());
-            pstm.setString(7, secretaria.getSenha());
-            pstm.setString(8, secretaria.getCPF());
-            pstm.execute();
-            JOptionPane.showMessageDialog(null,"Cadastro atualizado com sucesso.");
-        }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
-        }
-        finally{
-            try{
-                if(pstm != null){
-                    pstm.close();
-                }
-                if(conn != null){
-                    conn.close();
-                }
-            }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
-            }
-        }
-    }
     public ArrayList readForLogin(String cpf, String password){
         String sql = "SELECT nome FROM secretaria where cpf = ? and senha = md5(?)";
         ArrayList op = new ArrayList();
@@ -128,9 +63,10 @@ public class SecretariaDAO {
             }
             else{
                 op.add(false);
+                op.add("X");
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }finally{
             try{
                 if(conn != null){
@@ -143,7 +79,7 @@ public class SecretariaDAO {
                     rset.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
         return op;

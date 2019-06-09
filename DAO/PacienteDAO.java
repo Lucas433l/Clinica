@@ -1,5 +1,6 @@
 package DAO;
 
+import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
 import connection.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -30,8 +31,11 @@ public class PacienteDAO {
             pstm.setInt(8, paciente.getCod_plano());
             pstm.execute();
             JOptionPane.showMessageDialog(null,"Paciente Cadastrado com sucesso.");
+        }catch(MySQLIntegrityConstraintViolationException e){
+            JOptionPane.showMessageDialog(null,"Plano ou convênio não encontrado.");
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso o erro permaneça, procure sua equipe de TI.");
+            JOptionPane.showMessageDialog(null,e);
         }
         finally{
             try{
@@ -42,14 +46,14 @@ public class PacienteDAO {
                     pstm.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
     }
     
     public void update(Paciente paciente){
         String sql = "UPDATE paciente "+
-        "SET nome= ?, endereco= ?, telefone= ?, cpf=?, rg=?, sexo=?, cod_con=?, cod_plano= ? "+
+        "SET nome= ?, endereco= ?, telefone= ?, cpf= ?, rg=?, sexo=?, cod_con=?, cod_plano= ? "+
         "WHERE cpf = ?";
         Connection conn = null;
         PreparedStatement pstm = null;
@@ -69,9 +73,11 @@ public class PacienteDAO {
             pstm.setString(9, paciente.getCPF());
             
             pstm.execute();
-            JOptionPane.showMessageDialog(null,"Cadastro atualizado com sucesso.");
+            JOptionPane.showMessageDialog(null,"Dados atualizados com sucesso.");
+        }catch(MySQLIntegrityConstraintViolationException e){
+            JOptionPane.showMessageDialog(null,"Plano ou convênio não encontrado.");
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso o erro permaneça, procure sua equipe de TI.");
         }
         finally{
             try{
@@ -82,7 +88,7 @@ public class PacienteDAO {
                     pstm.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
     }
@@ -109,7 +115,7 @@ public class PacienteDAO {
                 pacientes.add(paciente);
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -120,7 +126,7 @@ public class PacienteDAO {
                     pstm.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
         return pacientes;
@@ -149,7 +155,7 @@ public class PacienteDAO {
                 pacientes.add(paciente);
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -160,7 +166,7 @@ public class PacienteDAO {
                     pstm.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
         return pacientes;
@@ -189,7 +195,7 @@ public class PacienteDAO {
                 pacientes.add(paciente);
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -200,7 +206,7 @@ public class PacienteDAO {
                     pstm.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }
         }
         return pacientes;

@@ -9,7 +9,7 @@ public class Consulta {
     private String medico;
     private String CRM;
     private String data;
-    private String hora_inicial;
+    private String hora_inicio;
     private String hora_final;
     private float preco;
     private int situacao;
@@ -69,12 +69,12 @@ public class Consulta {
         this.hora_final = hora_final;
     }
 
-    public String getHora_inical() {
-        return hora_inicial;
+    public String getHora_inicio() {
+        return hora_inicio;
     }
 
-    public void setHora_inicial(String hora) {
-        this.hora_inicial = hora;
+    public void setHora_inicio(String hora) {
+        this.hora_inicio = hora;
     }
 
     public float getPreco() {

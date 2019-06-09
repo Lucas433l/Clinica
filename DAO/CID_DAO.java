@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import model.CID;
 
 public class CID_DAO {
@@ -27,7 +28,7 @@ public class CID_DAO {
                 doencas.add(doenca);
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -41,13 +42,13 @@ public class CID_DAO {
                     rset.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }    
         }
         return doencas;
     }
     public List<CID> readForID(String id){
-        String sql = "SELECT * FROM tabela_cid where id_cid = ?";
+        String sql = "SELECT * FROM tabela_cid where id_cid LIKE ?";
         List<CID> doencas = new ArrayList<CID>();
         Connection conn = null;
         PreparedStatement pstm = null;
@@ -55,7 +56,7 @@ public class CID_DAO {
         try{
             conn = Conexao.Conectar();
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1,id);
+            pstm.setString(1,"%"+id+"%");
             rset = pstm.executeQuery();
             while(rset.next()){
                 CID doenca = new CID();
@@ -64,7 +65,7 @@ public class CID_DAO {
                 doencas.add(doenca);
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -78,13 +79,13 @@ public class CID_DAO {
                     rset.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }    
         }
         return doencas;
     }
     public List<CID> readForName(String name){
-        String sql = "SELECT * FROM tabela_cid where doenca = ?";
+        String sql = "SELECT * FROM tabela_cid where doenca LIKE ?";
         List<CID> doencas = new ArrayList<CID>();
         Connection conn = null;
         PreparedStatement pstm = null;
@@ -92,7 +93,7 @@ public class CID_DAO {
         try{
             conn = Conexao.Conectar();
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1, name);
+            pstm.setString(1, "%"+name+"%");
             rset = pstm.executeQuery();
             while(rset.next()){
                 CID doenca = new CID();
@@ -101,7 +102,7 @@ public class CID_DAO {
                 doencas.add(doenca);
             }
         }catch(Exception e){
-            System.out.println("Ocorreu o erro: "+e);
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
         }
         finally{
             try{
@@ -115,7 +116,7 @@ public class CID_DAO {
                     rset.close();
                 }
             }catch(SQLException e){
-                System.out.println("Ocorreu o erro: "+e);
+                JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
             }    
         }
         return doencas;
