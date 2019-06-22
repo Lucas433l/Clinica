@@ -72,21 +72,21 @@ public class BusPlano extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(570, 420));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel1.setText("Tipo:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel2.setText("Código Convênio:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel3.setText("Buscar Plano");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, 25));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 280, 40));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("Código Plano:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         jTable.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -112,20 +112,20 @@ public class BusPlano extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(jTable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 520, 188));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 620, 188));
 
         jS_Plano.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jS_Plano.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
-        getContentPane().add(jS_Plano, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 77, -1));
+        getContentPane().add(jS_Plano, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 77, -1));
 
         jT_Tipo.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 247, -1));
+        getContentPane().add(jT_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 230, 30));
 
         jS_Conv.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jS_Conv.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
-        getContentPane().add(jS_Conv, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 72, -1));
+        getContentPane().add(jS_Conv, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 72, -1));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
         jLabel6.setText("Buscar");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -133,9 +133,9 @@ public class BusPlano extends javax.swing.JInternalFrame {
                 jLabel6MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 98, 130, 40));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 130, 40));
 
-        jL_ap.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jL_ap.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jL_ap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/apagar-48.png"))); // NOI18N
         jL_ap.setText("Apagar");
         jL_ap.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -143,9 +143,9 @@ public class BusPlano extends javax.swing.JInternalFrame {
                 jL_apMouseClicked(evt);
             }
         });
-        getContentPane().add(jL_ap, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
+        getContentPane().add(jL_ap, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
 
-        jL_alt.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jL_alt.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jL_alt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/alterar-48.png"))); // NOI18N
         jL_alt.setText("Alterar");
         jL_alt.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,10 +153,10 @@ public class BusPlano extends javax.swing.JInternalFrame {
                 jL_altMouseClicked(evt);
             }
         });
-        getContentPane().add(jL_alt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
+        getContentPane().add(jL_alt, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 420));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

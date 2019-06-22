@@ -71,50 +71,50 @@ public class MarcarCons extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(600, 350));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel2.setText("Marcar Consultas ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 0, 300, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 410, 50));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel6.setText("Hora Início");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 198, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel7.setText("CPF");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 100, -1, 33));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, 33));
 
-        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel8.setText("Paciente");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 70, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        jLabel9.setText("preço(R$)");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 262, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel9.setText("Preço(R$)");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel10.setText("CRM");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 105, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel11.setText("Médico");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 160, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        jLabel12.setText("Hora fim");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 198, -1, -1));
+        jLabel12.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jLabel12.setText("Hora final");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel13.setText("Data");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 198, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         jT_Nome_P.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_Nome_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 68, 461, -1));
+        getContentPane().add(jT_Nome_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 461, -1));
 
         jT_Nome_M.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_Nome_M, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 158, 469, -1));
+        getContentPane().add(jT_Nome_M, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 469, -1));
 
         jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 103, 154, -1));
+        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 154, -1));
 
         try {
             jF_CPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -122,11 +122,11 @@ public class MarcarCons extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_CPF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 103, 171, -1));
+        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 171, -1));
 
-        jC_UF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jC_UF.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jC_UF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
-        getContentPane().add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 101, -1, -1));
+        getContentPane().add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 60, 30));
 
         try {
             jF_Data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -134,7 +134,7 @@ public class MarcarCons extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_Data.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 196, 90, -1));
+        getContentPane().add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 100, -1));
 
         try {
             jF_HoraI.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
@@ -142,7 +142,7 @@ public class MarcarCons extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_HoraI.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_HoraI, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 196, 77, -1));
+        getContentPane().add(jF_HoraI, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 77, -1));
 
         try {
             jF_HoraF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
@@ -150,7 +150,7 @@ public class MarcarCons extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_HoraF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_HoraF, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 196, 77, -1));
+        getContentPane().add(jF_HoraF, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 77, -1));
 
         try {
             jF_Preco.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.##")));
@@ -158,9 +158,9 @@ public class MarcarCons extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_Preco.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_Preco, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 260, 113, -1));
+        getContentPane().add(jF_Preco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 60, -1));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/marcar-48.png"))); // NOI18N
         jLabel3.setText("Marcar");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,9 +168,9 @@ public class MarcarCons extends javax.swing.JInternalFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 249, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar-48.png"))); // NOI18N
         jLabel4.setText("Limpar");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,10 +178,10 @@ public class MarcarCons extends javax.swing.JInternalFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 320));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

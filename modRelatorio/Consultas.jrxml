@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Consultas" language="groovy" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77e28883-35b4-4367-b720-cdb1c988664a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="title" fontName="Arial Black" fontSize="20" isBold="false"/>
+	<style name="colunas" fontName="Serif" fontSize="15"/>
+	<style name="cor colum" mode="Opaque" backcolor="#CCFFFF"/>
+	<subDataset name="New Dataset 1" uuid="a9a3abc5-4e01-4571-86d0-50fd5da593c1"/>
+	<subDataset name="Table Dataset 1" uuid="5175ced5-a3e2-44c2-8c6a-dcf58994ac82"/>
+	<queryString>
+		<![CDATA[SELECT * FROM consulta]]>
+	</queryString>
+	<field name="cod_consulta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome_paciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome_medico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="crm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hora_inicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hora_final" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="preco" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="situacao" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="3" width="79" height="30" uuid="30c7a271-7e5d-4030-93f7-a4fa8ae330dc"/>
+				<textElement>
+					<font fontName="SansSerif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VivaClin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="33" width="169" height="24" uuid="79c05a85-62cf-4abb-ac27-f7a712b7e1e0"/>
+				<textElement>
+					<font fontName="SansSerif" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[xx.xxx.xxx/xxxx-xx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="57" width="216" height="25" uuid="780cf133-ee8d-419d-b06d-27d191bbbf01"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Av. Bezerra de Menezes, xxx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="82" width="169" height="21" uuid="58c0cf47-d6ee-4e67-abed-bce00673408c"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(xx)xxxx-xxxx]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="710" height="1" uuid="42b89bc6-8c8d-4aa0-bce5-08df1bf48834"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="575" height="34" uuid="e3617abe-51cf-4b3c-ad05-0c2869697109"/>
+				<textElement>
+					<font fontName="Serif" size="24" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Consultas Realizadas em um Intervalo de data]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="71" height="20" uuid="7e047a86-0e9e-4eb7-a2cd-24a49b1f2d19"/>
+				<text><![CDATA[cod_consulta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="41" width="71" height="20" uuid="36c979fc-c611-4d21-bb41-40becd3eccfb"/>
+				<text><![CDATA[nome_paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="41" width="71" height="20" uuid="356e9c49-6ed5-4189-b771-71aa7b6bb279"/>
+				<text><![CDATA[cpf]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="41" width="71" height="20" uuid="094a2379-d34a-480c-b8c7-0e8bec5d32f7"/>
+				<text><![CDATA[nome_medico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="41" width="71" height="20" uuid="c05391c7-4a0b-4488-8a05-acc347eee28a"/>
+				<text><![CDATA[crm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="41" width="71" height="20" uuid="9b345fb4-e797-4c68-a1b2-5f608212fa34"/>
+				<text><![CDATA[data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="41" width="71" height="20" uuid="f5d69aa9-0160-4335-9f07-eaf3537a6649"/>
+				<text><![CDATA[hora_inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="41" width="71" height="20" uuid="bf02cefb-800d-4fe0-b3f6-be580000c40b"/>
+				<text><![CDATA[hora_final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="568" y="41" width="71" height="20" uuid="51dcf0a0-044a-4977-902e-e661a945b003"/>
+				<text><![CDATA[preco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="639" y="41" width="71" height="20" uuid="0cfcf28f-0513-434e-b85b-40293a7605f9"/>
+				<text><![CDATA[situacao]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="71" height="20" uuid="3d0ea50c-ebcf-422f-8d72-b5a5873d7fae"/>
+				<textFieldExpression><![CDATA[$F{cod_consulta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="0" width="71" height="20" uuid="626b6bc6-36dd-4747-a5f8-570516e5681c"/>
+				<textFieldExpression><![CDATA[$F{nome_paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="71" height="20" uuid="6055345f-f1f6-47e9-8ce2-6aa0bc285d08"/>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="0" width="71" height="20" uuid="f88a3a69-e678-4d15-96b0-288696cfca23"/>
+				<textFieldExpression><![CDATA[$F{nome_medico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="0" width="71" height="20" uuid="cf736b2c-ce66-44d1-aea0-38c5fa72aed3"/>
+				<textFieldExpression><![CDATA[$F{crm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="71" height="20" uuid="01d32bf4-67cd-4a9b-8349-839d249e44a8"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="0" width="71" height="20" uuid="10dad006-e4fb-4b70-beb0-327730ad410a"/>
+				<textFieldExpression><![CDATA[$F{hora_inicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="0" width="71" height="20" uuid="a61192fd-1f5b-4c69-8b22-ca00d54a6463"/>
+				<textFieldExpression><![CDATA[$F{hora_final}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="568" y="0" width="71" height="20" uuid="316f86c4-3b9c-4dfe-85f7-414c07273477"/>
+				<textFieldExpression><![CDATA[$F{preco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="639" y="0" width="71" height="20" uuid="e99bad41-8be4-45aa-b9d6-5dcf453b1af8"/>
+				<textFieldExpression><![CDATA[$F{situacao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

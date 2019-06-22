@@ -5,6 +5,15 @@
  */
 package frames;
 
+import connection.Conexao;
+import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
+
 /**
  *
  * @author Aluno 22
@@ -27,6 +36,10 @@ public class EmitirRelat extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton_consultas = new javax.swing.JButton();
+        jButton_medico = new javax.swing.JButton();
+        jButton_convenio = new javax.swing.JButton();
+        jButton_paciente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -34,14 +47,132 @@ public class EmitirRelat extends javax.swing.JInternalFrame {
         setMaximizable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton_consultas.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jButton_consultas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/exame-52.png"))); // NOI18N
+        jButton_consultas.setText("Consultas");
+        jButton_consultas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_consultasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_consultas, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 200, 70));
+
+        jButton_medico.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jButton_medico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/consulta-52.png"))); // NOI18N
+        jButton_medico.setText("Médico");
+        jButton_medico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_medicoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_medico, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 200, -1));
+
+        jButton_convenio.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jButton_convenio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cid-52.png"))); // NOI18N
+        jButton_convenio.setText("Convênio");
+        jButton_convenio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_convenioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_convenio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 160, -1));
+
+        jButton_paciente.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
+        jButton_paciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fichas-52.png"))); // NOI18N
+        jButton_paciente.setText("Paciente");
+        jButton_paciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_pacienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_paciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 170, -1));
+
+        jLabel1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
+        jLabel1.setText("botão");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 733, 445));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_medicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_medicoActionPerformed
+        Connection conn= null;
+        
+        String src="./src/modRelatorio/Medico.jasper";
+        
+        JasperPrint jasperPrint= null;
+       try {
+           conn = Conexao.Conectar();
+           jasperPrint= JasperFillManager.fillReport(src, null, conn);
+       } catch (JRException ex) {
+           System.out.println("Error: "+ex);
+       } catch (Exception ex) {
+            Logger.getLogger(EmitirRelat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JasperViewer view= new JasperViewer(jasperPrint,false);
+        view.setVisible(true);
+    }//GEN-LAST:event_jButton_medicoActionPerformed
+
+    private void jButton_consultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_consultasActionPerformed
+        Connection conn= null;
+        
+        String src="./src/modRelatorio/Consultas.jasper";
+        
+        JasperPrint jasperPrint= null;
+       try {
+           conn = Conexao.Conectar();
+           jasperPrint= JasperFillManager.fillReport(src, null, conn);
+       } catch (JRException ex) {
+           System.out.println("Error: "+ex);
+       } catch (Exception ex) {
+            Logger.getLogger(EmitirRelat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JasperViewer view= new JasperViewer(jasperPrint,false);
+        view.setVisible(true);
+    }//GEN-LAST:event_jButton_consultasActionPerformed
+
+    private void jButton_convenioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_convenioActionPerformed
+        Connection conn= null;
+        
+        String src="./src/modRelatorio/Convenios.jasper";
+        
+        JasperPrint jasperPrint= null;
+       try {
+           conn = Conexao.Conectar();
+           jasperPrint= JasperFillManager.fillReport(src, null, conn);
+       } catch (JRException ex) {
+           System.out.println("Error: "+ex);
+       } catch (Exception ex) {
+            Logger.getLogger(EmitirRelat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JasperViewer view= new JasperViewer(jasperPrint,false);
+        view.setVisible(true);
+    }//GEN-LAST:event_jButton_convenioActionPerformed
+
+    private void jButton_pacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_pacienteActionPerformed
+        Connection conn= null;
+        
+        String src="./src/modRelatorio/Pascientes.jasper";
+        
+        JasperPrint jasperPrint= null;
+       try {
+           conn = Conexao.Conectar();
+           jasperPrint= JasperFillManager.fillReport(src, null, conn);
+       } catch (JRException ex) {
+           System.out.println("Error: "+ex);
+       } catch (Exception ex) {
+            Logger.getLogger(EmitirRelat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JasperViewer view= new JasperViewer(jasperPrint,false);
+        view.setVisible(true);
+    }//GEN-LAST:event_jButton_pacienteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_consultas;
+    private javax.swing.JButton jButton_convenio;
+    private javax.swing.JButton jButton_medico;
+    private javax.swing.JButton jButton_paciente;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -118,13 +118,13 @@ public class inicio extends javax.swing.JFrame {
         jL_Data.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jL_Data.setText("03/02/2002");
 
-        jL_Dia.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jL_Dia.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jL_Dia.setText("Segunda-Feira");
 
         jL_Hora.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jL_Hora.setText("13:30");
 
-        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sair-26.png"))); // NOI18N
         jLabel2.setText("Sair");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {

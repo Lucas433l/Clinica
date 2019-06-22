@@ -73,12 +73,12 @@ public class BusMed extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel2.setText("Buscar Médicos ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(180, 10, 270, 50);
+        jLabel2.setBounds(140, 0, 350, 48);
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("Nome do Médico ");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(20, 130, 180, 40);
@@ -90,9 +90,9 @@ public class BusMed extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jT_Nome);
-        jT_Nome.setBounds(190, 140, 210, 26);
+        jT_Nome.setBounds(190, 140, 210, 28);
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("CRM do Médico");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(30, 90, 140, 30);
@@ -128,7 +128,7 @@ public class BusMed extends javax.swing.JInternalFrame {
         jPanel1.add(jC_UF);
         jC_UF.setBounds(420, 90, 71, 30);
 
-        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
         jLabel8.setText("Buscar");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -139,7 +139,7 @@ public class BusMed extends javax.swing.JInternalFrame {
         jPanel1.add(jLabel8);
         jLabel8.setBounds(420, 130, 120, 50);
 
-        jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/alterar-48.png"))); // NOI18N
         jLabel9.setText("Alterar");
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -148,7 +148,7 @@ public class BusMed extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(260, 370, 140, 50);
+        jLabel9.setBounds(210, 370, 140, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
         jPanel1.add(jLabel1);

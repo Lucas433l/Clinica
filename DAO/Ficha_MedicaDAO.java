@@ -54,7 +54,7 @@ public class Ficha_MedicaDAO {
     }
     public void update(Ficha_Medica ficha){
         String sql = "UPDATE ficha_medica SET data_consulta= ?,queixa=?,antecedentes=?,historico_doenca=?,hip_diag=?,"
-        + "medicacao=?,exames_ap_sist=?,exames_comp= ? WHERE cod_ficha = ?";
+        + " medicacao=?,exames_ap_sist=?,exames_comp= ? WHERE cod_ficha = ?";
         Connection conn = null;
         PreparedStatement pstm = null;
         
@@ -62,8 +62,7 @@ public class Ficha_MedicaDAO {
             conn = Conexao.Conectar();
             pstm = conn.prepareStatement(sql);
             
-            String aux[] = ficha.getData_consulta().split("/");
-            String data = aux[2] +"-"+aux[1]+"-"+aux[0];
+            String data = ficha.getData_consulta();
             pstm.setString(1, data);
             pstm.setString(2, ficha.getQueixa());
             pstm.setString(3, ficha.getAntecedentes());
@@ -79,6 +78,7 @@ public class Ficha_MedicaDAO {
             JOptionPane.showMessageDialog(null,"Dados atualizados com sucesso.");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado. Caso permaneça informe sua equipe de TI.");
+            System.out.println(e);
         }finally{
             try{
                 if(conn != null){

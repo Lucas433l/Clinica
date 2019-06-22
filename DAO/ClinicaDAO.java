@@ -9,7 +9,7 @@ import model.Clinica;
 
 public class ClinicaDAO {
     public void insert(Clinica clinica){
-        String sql = "INSERT INTO clinica(nome, cnpj, endereco, telefone) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO clinica(nome_clinica, cnpj, endereco, telefone) VALUES(?,?,?,?)";
         Connection conn = null;
         PreparedStatement pstm = null;
         try{

@@ -70,11 +70,11 @@ public class ConsultaMed extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel1.setText("Realizar Consulta");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 12, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/realizar-48.png"))); // NOI18N
         jLabel2.setText("Realizar");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,9 +82,9 @@ public class ConsultaMed extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 402, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 130, 40));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancelar-48.png"))); // NOI18N
         jLabel3.setText("Cancelar");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -92,7 +92,7 @@ public class ConsultaMed extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 402, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 140, 40));
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,11 +112,11 @@ public class ConsultaMed extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 163, 486, 233));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 610, 240));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("Data:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 122, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         try {
             jF_Data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -124,9 +124,9 @@ public class ConsultaMed extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jF_Data.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 120, 110, -1));
+        getContentPane().add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 110, -1));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
         jLabel5.setText("Buscar");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -134,17 +134,17 @@ public class ConsultaMed extends javax.swing.JFrame {
                 jLabel5MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 109, 123, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 120, 40));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel6.setText("CRM:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 73, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 71, 303, -1));
+        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 303, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 470));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 470));
 
         pack();
         setLocationRelativeTo(null);

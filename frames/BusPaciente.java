@@ -68,20 +68,20 @@ public class BusPaciente extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(630, 440));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel2.setText("Buscar Pacientes ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 270, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 390, 40));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("Nome ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 70, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 70, 30));
 
         jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 440, 30));
+        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 480, 30));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setText("CPF");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 40, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 40, 30));
 
         try {
             jF_CPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -89,7 +89,7 @@ public class BusPaciente extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_CPF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 170, 30));
+        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, 30));
 
         jScrollPane2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
 
@@ -112,9 +112,9 @@ public class BusPaciente extends javax.swing.JInternalFrame {
         });
         jScrollPane2.setViewportView(jTable);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 560, 190));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 580, 200));
 
-        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
         jLabel8.setText("Buscar");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -122,7 +122,7 @@ public class BusPaciente extends javax.swing.JInternalFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 140, 40));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 140, 40));
 
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/alterar-48.png"))); // NOI18N
@@ -132,7 +132,7 @@ public class BusPaciente extends javax.swing.JInternalFrame {
                 jLabel9MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 140, 50));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, 140, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 420));

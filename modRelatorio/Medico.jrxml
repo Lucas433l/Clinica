@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Medicos" language="groovy" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77e28883-35b4-4367-b720-cdb1c988664a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="title" fontName="Arial Black" fontSize="20" isBold="false"/>
+	<style name="colunas" fontName="Serif" fontSize="15"/>
+	<style name="cor colum" mode="Opaque" backcolor="#CCFFFF"/>
+	<queryString>
+		<![CDATA[SELECT
+     medico.`nome` AS medico_nome,
+     medico.`cpf` AS medico_cpf,
+     medico.`rg` AS medico_rg,
+     medico.`crm` AS medico_crm,
+     medico.`telefone` AS medico_telefone,
+     medico.`endereco` AS medico_endereco,
+     medico.`sexo` AS medico_sexo,
+     medico.`senha` AS medico_senha
+FROM
+     `medico` medico]]>
+	</queryString>
+	<field name="medico_nome" class="java.lang.String"/>
+	<field name="medico_cpf" class="java.lang.String"/>
+	<field name="medico_rg" class="java.lang.String"/>
+	<field name="medico_crm" class="java.lang.String"/>
+	<field name="medico_telefone" class="java.lang.String"/>
+	<field name="medico_endereco" class="java.lang.String"/>
+	<field name="medico_sexo" class="java.lang.String"/>
+	<field name="medico_senha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="3" width="79" height="30" uuid="30c7a271-7e5d-4030-93f7-a4fa8ae330dc"/>
+				<textElement>
+					<font fontName="SansSerif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VivaClin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="33" width="169" height="24" uuid="79c05a85-62cf-4abb-ac27-f7a712b7e1e0"/>
+				<textElement>
+					<font fontName="SansSerif" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[xx.xxx.xxx/xxxx-xx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="57" width="216" height="25" uuid="780cf133-ee8d-419d-b06d-27d191bbbf01"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Av. Bezerra de Menezes, xxx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="82" width="169" height="21" uuid="58c0cf47-d6ee-4e67-abed-bce00673408c"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(xx)xxxx-xxxx]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="710" height="1" uuid="42b89bc6-8c8d-4aa0-bce5-08df1bf48834"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="331" height="34" uuid="e3617abe-51cf-4b3c-ad05-0c2869697109"/>
+				<textElement>
+					<font fontName="Serif" size="24" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Médicos Cadastrados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement style="cor colum" x="0" y="41" width="710" height="20" uuid="cec5dd68-2f90-44fd-9a68-551773cb9bf8"/>
+			</frame>
+			<staticText>
+				<reportElement style="colunas" x="0" y="41" width="100" height="20" uuid="3c7d6d86-5ff9-4a68-88bd-1fd781e0dd83"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="100" y="41" width="112" height="20" uuid="2eebaffa-60a8-428f-9b81-452d4eecbd21"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="212" y="41" width="100" height="20" uuid="d0d86b78-e920-4790-a13e-f6d4904c7a59"/>
+				<text><![CDATA[RG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="312" y="41" width="100" height="20" uuid="c84f0a75-8db6-44c0-b33d-55819dd20ec5"/>
+				<text><![CDATA[CRM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="412" y="41" width="107" height="20" uuid="80eb07ae-9427-4aa3-b6d6-cb0d08a08cd1"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="519" y="41" width="142" height="20" uuid="a7ea549b-5214-432a-b061-331e1207fe85"/>
+				<text><![CDATA[Endereco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="661" y="41" width="49" height="20" uuid="96730d5c-b5ae-4037-b156-04b92348ea0e"/>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="41" width="88" height="20" uuid="625c630e-25ee-452a-816d-e4e8acd57b7a"/>
+				<text><![CDATA[medico_nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="41" width="88" height="20" uuid="beb16ede-bb48-42d8-b48b-afea22196a1b"/>
+				<text><![CDATA[medico_cpf]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="41" width="88" height="20" uuid="3ff1a946-246b-4c80-acbe-5739e837a1be"/>
+				<text><![CDATA[medico_rg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="41" width="88" height="20" uuid="c941a0c8-8389-4737-b707-f935a426bd03"/>
+				<text><![CDATA[medico_crm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="41" width="88" height="20" uuid="37ac3388-e2bb-4c3c-a289-b594f54571cd"/>
+				<text><![CDATA[medico_telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="41" width="88" height="20" uuid="459a8e56-8e55-4d1f-80c0-611dfb46d7b4"/>
+				<text><![CDATA[medico_endereco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="41" width="88" height="20" uuid="e04701d8-234f-417f-b45f-0eb16b7accdd"/>
+				<text><![CDATA[medico_sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="41" width="88" height="20" uuid="a39e2fa1-7deb-4bfa-ace3-ae5c290a5fd2"/>
+				<text><![CDATA[medico_senha]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="colunas" x="0" y="0" width="100" height="20" uuid="f296b410-ee5d-420e-b614-3fa0b67fbbbb"/>
+				<textFieldExpression><![CDATA[$F{medico_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="100" y="0" width="112" height="20" uuid="6e183d3e-3feb-4c49-9c4a-ef237db855b5"/>
+				<textFieldExpression><![CDATA[$F{medico_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="212" y="0" width="100" height="20" uuid="55c709ae-ced7-49e3-af71-ce29cebb5e06"/>
+				<textFieldExpression><![CDATA[$F{medico_rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="312" y="0" width="100" height="20" uuid="5ec72479-c1c4-4276-a3d5-8f8e7eda0838"/>
+				<textFieldExpression><![CDATA[$F{medico_crm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="412" y="0" width="107" height="20" uuid="2beaef5e-c9d8-429c-82be-2ef7e9d412e8"/>
+				<textFieldExpression><![CDATA[$F{medico_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="519" y="0" width="142" height="20" uuid="bd40f982-1079-4f20-b1f3-e80a0911dd87"/>
+				<textFieldExpression><![CDATA[$F{medico_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="661" y="0" width="49" height="20" uuid="a5c67502-bead-41c2-9e2f-7b0ca8c726d4"/>
+				<textFieldExpression><![CDATA[$F{medico_sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="88" height="20" uuid="f500ff9a-fa8f-4735-bb5e-939643bb07ab"/>
+				<textFieldExpression><![CDATA[$F{medico_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="88" height="20" uuid="2bdf212a-1335-4a19-8c4f-0f29d5acf87d"/>
+				<textFieldExpression><![CDATA[$F{medico_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="88" height="20" uuid="c1f2efac-3739-4903-b17d-ed3ae980f362"/>
+				<textFieldExpression><![CDATA[$F{medico_rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="88" height="20" uuid="ffcef18d-f4c3-416e-b107-8365ff1993a8"/>
+				<textFieldExpression><![CDATA[$F{medico_crm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="0" width="88" height="20" uuid="3ff334e8-6894-4f7c-879d-f0a94e43e80f"/>
+				<textFieldExpression><![CDATA[$F{medico_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="88" height="20" uuid="0edb5e49-de6b-4fc8-a781-e393dc73e7db"/>
+				<textFieldExpression><![CDATA[$F{medico_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="0" width="88" height="20" uuid="980f6a1c-0b6b-40fd-a35f-bc1d64d8512d"/>
+				<textFieldExpression><![CDATA[$F{medico_sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="616" y="0" width="88" height="20" uuid="e64c2784-8469-485a-9591-658be93280d7"/>
+				<textFieldExpression><![CDATA[$F{medico_senha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

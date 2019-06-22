@@ -44,7 +44,7 @@
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/img/limpar-48.png"/>
@@ -56,14 +56,14 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="330" y="320" width="130" height="50"/>
+          <AbsoluteConstraints x="230" y="330" width="130" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="RG"/>
       </Properties>
@@ -76,7 +76,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Nome"/>
       </Properties>
@@ -89,7 +89,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="CPF"/>
       </Properties>
@@ -102,7 +102,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Telefone"/>
       </Properties>
@@ -115,7 +115,7 @@
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
       </Properties>
@@ -128,7 +128,7 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sexo"/>
       </Properties>
@@ -168,7 +168,7 @@
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Senha"/>
       </Properties>
@@ -187,7 +187,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="120" y="10" width="420" height="50"/>
+          <AbsoluteConstraints x="130" y="0" width="420" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -221,7 +221,7 @@
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/img/salvar-como-48.png"/>
@@ -236,7 +236,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="150" y="320" width="130" height="50"/>
+          <AbsoluteConstraints x="90" y="330" width="130" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -246,7 +246,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Feminino"/>
       </Properties>
@@ -274,7 +274,7 @@
           <ComponentRef name="buttonGroup1"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Liberation Sans" size="18" style="1"/>
+          <Font name="Liberation Serif" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Masculina"/>
       </Properties>
@@ -319,7 +319,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="650" height="420"/>
+          <AbsoluteConstraints x="0" y="0" width="640" height="390"/>
         </Constraint>
       </Constraints>
     </Component>

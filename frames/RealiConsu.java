@@ -5,6 +5,15 @@
  */
 package frames;
 
+import connection.Conexao;
+import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
+
 /**
  *
  * @author Aluno 22
@@ -28,7 +37,6 @@ public class RealiConsu extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -41,12 +49,7 @@ public class RealiConsu extends javax.swing.JInternalFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/consulta-52.png"))); // NOI18N
-        jButton2.setText("Documentos");
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
-
-        jButton4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fichas-52.png"))); // NOI18N
         jButton4.setText("Ficha Médica");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -54,9 +57,9 @@ public class RealiConsu extends javax.swing.JInternalFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 220, 60));
 
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cid-52.png"))); // NOI18N
         jButton1.setText("Consultar Tabela CID");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -66,12 +69,13 @@ public class RealiConsu extends javax.swing.JInternalFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Consultas ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 380, 40));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 380, 40));
 
-        jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setFont(new java.awt.Font("Liberation Serif", 1, 24)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/exame-52.png"))); // NOI18N
         jButton3.setText("Consultas do dia");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -124,7 +128,6 @@ public class RealiConsu extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;

@@ -79,34 +79,34 @@ public class AlterarMed extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Alterar Dados Médico");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 420, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 500, 50));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("Nome ");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, 20));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 20));
 
         jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 410, 30));
+        getContentPane().add(jT_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 490, 30));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("CPF");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 40, 20));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 40, 20));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setText("RG");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 40, 20));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 30, 20));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel6.setText("Telefone");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 80, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 80, -1));
 
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel7.setText("Sexo");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 50, 20));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 50, 20));
 
-        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel8.setText("Endereço");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 90, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 90, 30));
 
         jF_CPF.setEditable(false);
         try {
@@ -115,7 +115,7 @@ public class AlterarMed extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jF_CPF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 165, 30));
+        getContentPane().add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 165, 30));
 
         try {
             jF_Telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) 9####-####")));
@@ -123,31 +123,31 @@ public class AlterarMed extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jF_Telefone.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jF_Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 160, 30));
+        getContentPane().add(jF_Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 160, 30));
 
-        jLabel11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel11.setText("CRM");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
         buttonGroup1.add(jR_F);
-        jR_F.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jR_F.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jR_F.setText("Feminino");
         jR_F.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jR_FActionPerformed(evt);
             }
         });
-        getContentPane().add(jR_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
+        getContentPane().add(jR_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, -1, -1));
 
         buttonGroup1.add(jR_M);
-        jR_M.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jR_M.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jR_M.setText("Masculino");
         jR_M.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jR_MActionPerformed(evt);
             }
         });
-        getContentPane().add(jR_M, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 130, -1));
+        getContentPane().add(jR_M, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 120, 30));
 
         jT_End.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jT_End.addActionListener(new java.awt.event.ActionListener() {
@@ -155,9 +155,9 @@ public class AlterarMed extends javax.swing.JFrame {
                 jT_EndActionPerformed(evt);
             }
         });
-        getContentPane().add(jT_End, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 410, 30));
+        getContentPane().add(jT_End, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 470, 30));
 
-        jLabel10.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar-como-48.png"))); // NOI18N
         jLabel10.setText("Salvar");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -165,16 +165,16 @@ public class AlterarMed extends javax.swing.JFrame {
                 jLabel10MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 130, 50));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 130, 50));
 
         jT_CRM.setEditable(false);
         jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 421, 30));
+        getContentPane().add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 500, 30));
 
         jT_RG.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_RG, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 180, 30));
+        getContentPane().add(jT_RG, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 180, 30));
 
-        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sair-48.png"))); // NOI18N
         jLabel1.setText("Sair");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -182,9 +182,10 @@ public class AlterarMed extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 100, 50));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
+        jLabel9.setPreferredSize(new java.awt.Dimension(600, 350));
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 460));
 
         pack();

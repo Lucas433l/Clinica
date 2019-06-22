@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Paciente" language="groovy" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77e28883-35b4-4367-b720-cdb1c988664a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="title" fontName="Arial Black" fontSize="20" isBold="false"/>
+	<style name="colunas" fontName="Serif" fontSize="15"/>
+	<style name="cor colum" mode="Opaque" backcolor="#CCFFFF"/>
+	<subDataset name="New Dataset 1" uuid="a9a3abc5-4e01-4571-86d0-50fd5da593c1"/>
+	<subDataset name="Table Dataset 1" uuid="5175ced5-a3e2-44c2-8c6a-dcf58994ac82"/>
+	<queryString>
+		<![CDATA[SELECT * FROM paciente]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_con" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_plano" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="3" width="79" height="30" uuid="30c7a271-7e5d-4030-93f7-a4fa8ae330dc"/>
+				<textElement>
+					<font fontName="SansSerif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VivaClin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="33" width="169" height="24" uuid="79c05a85-62cf-4abb-ac27-f7a712b7e1e0"/>
+				<textElement>
+					<font fontName="SansSerif" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[xx.xxx.xxx/xxxx-xx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="57" width="216" height="25" uuid="780cf133-ee8d-419d-b06d-27d191bbbf01"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Av. Bezerra de Menezes, xxx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="82" width="169" height="21" uuid="58c0cf47-d6ee-4e67-abed-bce00673408c"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(xx)xxxx-xxxx]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="710" height="1" uuid="42b89bc6-8c8d-4aa0-bce5-08df1bf48834"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="344" height="34" uuid="e3617abe-51cf-4b3c-ad05-0c2869697109"/>
+				<textElement>
+					<font fontName="Serif" size="24" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Pacientes Cadastrados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement style="cor colum" x="0" y="41" width="710" height="20" uuid="652de301-86e6-4967-b88c-76e2b5225340"/>
+			</frame>
+			<staticText>
+				<reportElement style="colunas" x="0" y="41" width="100" height="20" uuid="d932d836-6969-4895-bf1f-bf38253ba201"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="100" y="41" width="100" height="20" uuid="1b4d69b2-7c17-4a5d-baef-628fccb07354"/>
+				<text><![CDATA[Endereço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="200" y="41" width="110" height="20" uuid="cf3a8e2e-d70e-429f-ad92-01f8090f4053"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="311" y="41" width="119" height="20" uuid="7b9e87cb-3230-4628-b3dd-348a3ca3b8fd"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="430" y="41" width="105" height="20" uuid="df6ef3e1-65c3-48b2-aa17-8378c3f726cb"/>
+				<text><![CDATA[RG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="535" y="41" width="92" height="20" uuid="1b2fe073-32b9-43ac-9593-58934edeebbf"/>
+				<text><![CDATA[Cod. Convênio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="colunas" x="639" y="41" width="71" height="20" uuid="a676b7db-7339-457f-84b7-c89d07688a0e"/>
+				<text><![CDATA[Cod. Plano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="41" width="88" height="20" uuid="5621e662-e0a7-4d01-8683-4bff9cf21bee"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="41" width="88" height="20" uuid="4a1f2791-57e9-466a-a7a4-3cbfb5219d2b"/>
+				<text><![CDATA[endereco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="41" width="88" height="20" uuid="0015550c-2e5f-4f8c-a203-9f2933c3859d"/>
+				<text><![CDATA[telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="41" width="88" height="20" uuid="c7f9981d-7c0a-4f1e-93be-b1c0825e887a"/>
+				<text><![CDATA[cpf]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="41" width="88" height="20" uuid="7ea4232b-0cbc-4256-8a93-1afd1fae2af8"/>
+				<text><![CDATA[rg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="41" width="88" height="20" uuid="f6c0e77f-2ae7-477a-90f0-d39e41b8caf9"/>
+				<text><![CDATA[sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="41" width="88" height="20" uuid="cb94c136-ebca-46dc-a459-2856fc63e858"/>
+				<text><![CDATA[cod_con]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="41" width="88" height="20" uuid="b057fb56-74a6-44db-ab58-a11b631875fa"/>
+				<text><![CDATA[cod_plano]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="colunas" x="0" y="0" width="100" height="20" uuid="2d275bde-0952-4850-b36b-2db7f836224e"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="100" y="0" width="100" height="20" uuid="369c7388-6d7b-4d8c-8706-e9fc24c4aa34"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="201" y="0" width="110" height="20" uuid="271c8e20-e275-461c-be20-67179b004033"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="312" y="0" width="119" height="20" uuid="2e13b490-096a-4cf1-9131-b49e7e1e2e5c"/>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="430" y="0" width="105" height="20" uuid="7a8dc166-6f7b-470f-bf2d-b3999f1cdf90"/>
+				<textFieldExpression><![CDATA[$F{rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="535" y="0" width="92" height="20" uuid="0216dcb0-df3c-4263-ab99-6af49eeadf9f"/>
+				<textFieldExpression><![CDATA[$F{cod_con}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="colunas" x="639" y="0" width="71" height="20" uuid="d38f3b15-3800-4e69-b390-79dcfed1aa4f"/>
+				<textFieldExpression><![CDATA[$F{cod_plano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="88" height="20" uuid="5fa15658-ab66-45ce-a530-1f6320cbe144"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="88" height="20" uuid="41d4bfce-d984-407e-84f2-ebe4c7b6cbb0"/>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="88" height="20" uuid="4b1d9abe-fb1e-4205-9e82-9c07c45fcf40"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="88" height="20" uuid="17ad5211-a6df-4b19-9d19-2fc3360dd8e0"/>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="0" width="88" height="20" uuid="9d8fac7a-06b1-4f89-af2d-69c2d66a72ea"/>
+				<textFieldExpression><![CDATA[$F{rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="88" height="20" uuid="753a0784-e499-416f-8f57-91b181d10ffe"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="0" width="88" height="20" uuid="c2d2fe8d-fc65-4d4d-a763-dcb2160f9250"/>
+				<textFieldExpression><![CDATA[$F{cod_con}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="616" y="0" width="88" height="20" uuid="c7395aec-9a90-46f6-98e9-a9f3a4a7466a"/>
+				<textFieldExpression><![CDATA[$F{cod_plano}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

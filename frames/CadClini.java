@@ -55,7 +55,7 @@ public class CadClini extends javax.swing.JInternalFrame {
         setMinimumSize(new java.awt.Dimension(630, 380));
         getContentPane().setLayout(null);
 
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar-48.png"))); // NOI18N
         jLabel7.setText("Limpar");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,37 +67,37 @@ public class CadClini extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(340, 260, 120, 50);
+        jLabel7.setBounds(460, 400, 130, 40);
 
         jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cadastrar Informações da Clínica ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-80, 20, 800, 40);
+        jLabel2.setBounds(50, 0, 610, 60);
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("Nome da clínica:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 90, 160, 22);
+        jLabel3.setBounds(10, 130, 160, 22);
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("CNPJ:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(330, 190, 60, 22);
+        jLabel4.setBounds(370, 270, 60, 22);
 
-        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setText("Endereço: ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 140, 110, 22);
+        jLabel5.setBounds(30, 210, 110, 22);
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel6.setText("Telefone Fixo:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 190, 130, 22);
+        jLabel6.setBounds(40, 270, 130, 22);
 
         jT_Nome.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         getContentPane().add(jT_Nome);
-        jT_Nome.setBounds(170, 90, 410, 30);
+        jT_Nome.setBounds(150, 130, 480, 30);
 
         try {
             jF_CNPJ.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
@@ -106,11 +106,11 @@ public class CadClini extends javax.swing.JInternalFrame {
         }
         jF_CNPJ.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         getContentPane().add(jF_CNPJ);
-        jF_CNPJ.setBounds(390, 180, 200, 40);
+        jF_CNPJ.setBounds(440, 270, 200, 30);
 
         jT_End.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         getContentPane().add(jT_End);
-        jT_End.setBounds(130, 140, 460, 30);
+        jT_End.setBounds(130, 200, 510, 30);
 
         try {
             jF_Telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####-####")));
@@ -119,9 +119,9 @@ public class CadClini extends javax.swing.JInternalFrame {
         }
         jF_Telefone.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         getContentPane().add(jF_Telefone);
-        jF_Telefone.setBounds(150, 180, 170, 40);
+        jF_Telefone.setBounds(180, 270, 170, 30);
 
-        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar-como-48.png"))); // NOI18N
         jLabel8.setText("Salvar");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -130,11 +130,11 @@ public class CadClini extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(190, 260, 130, 50);
+        jLabel8.setBounds(320, 410, 120, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 640, 420);
+        jLabel1.setBounds(0, 0, 670, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

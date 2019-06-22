@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Receita" language="groovy" pageWidth="750" pageHeight="842" columnWidth="710" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77e28883-35b4-4367-b720-cdb1c988664a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="title" fontName="Arial Black" fontSize="20" isBold="false"/>
+	<style name="colunas" fontName="Serif" fontSize="15"/>
+	<style name="cor colum" mode="Opaque" backcolor="#CCFFFF"/>
+	<subDataset name="New Dataset 1" uuid="a9a3abc5-4e01-4571-86d0-50fd5da593c1"/>
+	<subDataset name="Table Dataset 1" uuid="5175ced5-a3e2-44c2-8c6a-dcf58994ac82"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cod_con" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="faturamento" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="3" width="79" height="30" uuid="30c7a271-7e5d-4030-93f7-a4fa8ae330dc"/>
+				<textElement>
+					<font fontName="SansSerif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VivaClin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="33" width="169" height="24" uuid="79c05a85-62cf-4abb-ac27-f7a712b7e1e0"/>
+				<textElement>
+					<font fontName="SansSerif" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[xx.xxx.xxx/xxxx-xx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="57" width="216" height="25" uuid="780cf133-ee8d-419d-b06d-27d191bbbf01"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Av. Bezerra de Menezes, xxx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="82" width="169" height="21" uuid="58c0cf47-d6ee-4e67-abed-bce00673408c"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(xx)xxxx-xxxx]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="98" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="710" height="1" uuid="42b89bc6-8c8d-4aa0-bce5-08df1bf48834"/>
+			</line>
+			<staticText>
+				<reportElement style="colunas" x="32" y="67" width="93" height="31" uuid="d3c60f0d-456e-4ebe-bd62-3a019bebd7dd"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Paciente:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="125" y="59" width="503" height="39" uuid="3e2e4082-1a4f-44fb-a8d4-8653cffa0ef5"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="100" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="74" y="44" width="159" height="1" uuid="6cd5e8bf-756b-44c6-a66c-9b8d359f50ad"/>
+			</line>
+			<line>
+				<reportElement x="359" y="43" width="300" height="1" uuid="c4c065f9-84fc-4105-8f2c-c63b3357271c"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="111" y="21" width="14" height="24" uuid="a2c2172d-d8c4-475b-b635-68dc459ea293"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="164" y="21" width="13" height="24" uuid="597819bb-03ef-4356-8f6c-201e2226cf55"/>
+			</line>
+			<staticText>
+				<reportElement style="colunas" x="21" y="14" width="53" height="31" uuid="0fc983ec-6e81-44e5-b0d8-5bd783b7483c"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement style="colunas" x="459" y="0" width="111" height="28" uuid="16b9e238-19d5-4613-9a2d-715a49abaef6"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Profissional]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

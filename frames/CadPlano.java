@@ -50,9 +50,10 @@ public class CadPlano extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar-48.png"))); // NOI18N
         jLabel7.setText("Limpar");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -60,39 +61,39 @@ public class CadPlano extends javax.swing.JInternalFrame {
                 jLabel7MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel1.setText("Convênio:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         jS_Conv.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jS_Conv.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
-        getContentPane().add(jS_Conv, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 70, 31));
+        getContentPane().add(jS_Conv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 70, 31));
 
-        jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel2.setText("Tipo:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, 36));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, 36));
 
         jT_Tipo.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        getContentPane().add(jT_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 238, -1));
+        getContentPane().add(jT_Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 240, 30));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("Descrição:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         jT_Desc.setColumns(20);
         jT_Desc.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         jT_Desc.setRows(5);
         jScrollPane1.setViewportView(jT_Desc);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 270, 90));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 510, 180));
 
-        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel4.setText("Cadastrar Plano");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 12, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar-como-48.png"))); // NOI18N
         jLabel5.setText("Salvar");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -100,10 +101,10 @@ public class CadPlano extends javax.swing.JInternalFrame {
                 jLabel5MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 110, 50));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 110, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 340));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

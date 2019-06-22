@@ -72,24 +72,25 @@ public class BusConsultas extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setMinimumSize(new java.awt.Dimension(640, 390));
         setPreferredSize(new java.awt.Dimension(640, 390));
+        getContentPane().setLayout(null);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Buscar Consultas ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 340, 60));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 460, 60));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("CRM do Médico:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 160, 30));
 
         jT_CRM.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        jPanel1.add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 170, 30));
+        jPanel1.add(jT_CRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 170, 30));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("CPF do Cliente:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 140, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 140, 30));
 
         try {
             jF_CPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -97,11 +98,11 @@ public class BusConsultas extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         jF_CPF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        jPanel1.add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 150, 30));
+        jPanel1.add(jF_CPF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 150, 30));
 
-        jLabel5.setFont(new java.awt.Font("News701 BT", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setText("Data da Consulta: ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 190, 30));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 150, 30));
 
         try {
             jF_Data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -114,7 +115,7 @@ public class BusConsultas extends javax.swing.JInternalFrame {
                 jF_DataActionPerformed(evt);
             }
         });
-        jPanel1.add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 130, 30));
+        jPanel1.add(jF_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 130, 30));
 
         jTable.setFont(new java.awt.Font("Liberation Serif", 1, 14)); // NOI18N
         jTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -135,9 +136,9 @@ public class BusConsultas extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(jTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 610, 140));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 610, 140));
 
-        jLabel10.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar-48.png"))); // NOI18N
         jLabel10.setText("Buscar ");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,26 +146,18 @@ public class BusConsultas extends javax.swing.JInternalFrame {
                 jLabel10MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 130, 60));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 130, 40));
 
         jC_UF.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jC_UF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
-        jPanel1.add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 70, 29));
+        jPanel1.add(jC_UF, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 70, 29));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(600, 600));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 480));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 380));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 700, 367);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -69,7 +69,7 @@ public class CadSecre extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(500, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar-48.png"))); // NOI18N
         jLabel12.setText("Limpar");
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -77,29 +77,29 @@ public class CadSecre extends javax.swing.JInternalFrame {
                 jLabel12MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, 130, 50));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 130, 50));
 
-        jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 30, 20));
 
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel3.setText("Nome");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 60, -1));
 
-        jLabel4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel4.setText("CPF");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 40, -1));
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel6.setText("Telefone");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 90, -1));
 
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel7.setText("Endereço");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 90, -1));
 
-        jLabel8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel8.setText("Sexo");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 50, -1));
 
@@ -114,13 +114,13 @@ public class CadSecre extends javax.swing.JInternalFrame {
         jT_End.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         getContentPane().add(jT_End, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 480, 30));
 
-        jLabel9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel9.setText("Senha");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 60, -1));
 
         jLabel2.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         jLabel2.setText("Cadastramento de Secretária");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 420, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 420, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mostrar-a-senha-24.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -133,7 +133,7 @@ public class CadSecre extends javax.swing.JInternalFrame {
         jP_Senha.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         getContentPane().add(jP_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 240, 30));
 
-        jLabel11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar-como-48.png"))); // NOI18N
         jLabel11.setText("Salvar ");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -142,10 +142,10 @@ public class CadSecre extends javax.swing.JInternalFrame {
                 jLabel11MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 130, 50));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 130, 50));
 
         buttonGroup1.add(jR_F);
-        jR_F.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jR_F.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jR_F.setText("Feminino");
         getContentPane().add(jR_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, -1, -1));
 
@@ -153,7 +153,7 @@ public class CadSecre extends javax.swing.JInternalFrame {
         getContentPane().add(jT_RG, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 210, 30));
 
         buttonGroup1.add(jR_M);
-        jR_M.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jR_M.setFont(new java.awt.Font("Liberation Serif", 1, 18)); // NOI18N
         jR_M.setText("Masculina");
         getContentPane().add(jR_M, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 125, -1));
 
@@ -169,7 +169,7 @@ public class CadSecre extends javax.swing.JInternalFrame {
         getContentPane().add(jF_Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 150, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wallpaper.jpg"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 420));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 390));
 
         setBounds(0, 0, 649, 416);
     }// </editor-fold>//GEN-END:initComponents
